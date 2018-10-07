@@ -28,6 +28,6 @@ public class WChenLib {
             num2 = num3;
             i = Fnum.length();
         }
-        return (Integer.valueOf(Fnum) == n)
+        return (Integer.valueOf(Fnum) == n);
     }
 }
