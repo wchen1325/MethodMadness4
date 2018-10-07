@@ -14,9 +14,7 @@ public class WChenLib {
         return day + "-" + month + "-" + year;
     }
 
-
-
-    public static boolean isFibonnaci (int n){
+    public static boolean isSequenceFibonnaci (int n){
         String Strn = String.valueOf(n);
         int num1 = Integer.valueOf(Strn.substring(0,1));
         int num2 = Integer.valueOf(Strn.substring(1,2));
@@ -30,5 +28,31 @@ public class WChenLib {
             i = Fnum.length();
         }
         return (Integer.valueOf(Fnum) == n);
+    }
+
+    public static boolean isFibonnaci (int n){
+        int num1 = 0;
+        int num2 = 1;
+        int num3 = 1;
+        if (n == num1 || n == num2){
+            return true;
+        }
+        else{
+            while(num3 < n){
+                 num3 = num1 + num2;
+                if (num3 == n){
+                    return true;
+                }
+                num1 = num2;
+                num2 = num3;
+            }
+            return false;
+        }
+    }
+
+    public static void multiplicationtable(int base, int range){
+         for(int n=0; n <= range; n++){
+             System.out.println(base*n);
+         }
     }
 }
