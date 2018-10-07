@@ -55,4 +55,22 @@ public class WChenLib {
              System.out.println(base*n);
          }
     }
+
+    public static int leastCommonMultiple(int num1, int num2, int num3){
+        int num1M = num1;
+        int num2M = num2;
+        int num3M = num3;
+        while (num1 != num2 || num2 != num3){
+            if (num1 < num2 || num1 < num3){
+                num1 += num1M;
+            }
+            if (num2 < num1 || num2 < num3){
+                num2 += num2M;
+            }
+            if (num3 < num1 || num3 < num2){
+                num3 += num3M;
+            }
+        }
+        return num1;
+    }
 }
